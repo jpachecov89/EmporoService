@@ -1,0 +1,8 @@
+C:\Users\Joel\source\repos\EmporoService\DataAccess\bin\Debug\netcoreapp2.2\DataAccess.deps.json
+C:\Users\Joel\source\repos\EmporoService\DataAccess\bin\Debug\netcoreapp2.2\DataAccess.dll
+C:\Users\Joel\source\repos\EmporoService\DataAccess\bin\Debug\netcoreapp2.2\DataAccess.pdb
+C:\Users\Joel\source\repos\EmporoService\DataAccess\obj\Debug\netcoreapp2.2\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Joel\source\repos\EmporoService\DataAccess\obj\Debug\netcoreapp2.2\DataAccess.AssemblyInfo.cs
+C:\Users\Joel\source\repos\EmporoService\DataAccess\obj\Debug\netcoreapp2.2\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Joel\source\repos\EmporoService\DataAccess\obj\Debug\netcoreapp2.2\DataAccess.dll
+C:\Users\Joel\source\repos\EmporoService\DataAccess\obj\Debug\netcoreapp2.2\DataAccess.pdb
