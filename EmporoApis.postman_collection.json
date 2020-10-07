@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "3f137f66-f777-4a06-8db0-1c46c819b21f",
+		"name": "EmporoApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "client",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "api",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:56900/connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56900",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllItems",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImMxNTBhOGMyZDVlNzBjOThkOTVlY2Q2ZGY3Mjk3NjYwIiwidHlwIjoiSldUIn0.eyJuYmYiOjE2MDIwODkwNTgsImV4cCI6MTYwMjA5MjY1OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1NjkwMCIsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0OjU2OTAwL3Jlc291cmNlcyIsImFwaSJdLCJjbGllbnRfaWQiOiJjbGllbnQiLCJzY29wZSI6WyJhcGkiXX0.U-dGljbzo3H4b8EgcatZ8J-TXal8CVZaPvEJkaTT-9J5ctI1mu1gj-Af_V4Qsnm7IFWKiFbLQFC1CFpmO1wwO1trhH5CETj3sPG6cJFh1qRYLMEuJICDyyo35Lm7cEvIsE9rSYc-BnZgCwBiYF8td5xdED1dBpJSDWva-1qQ2HaBQC2IAAAhES8ueSL_NNaOfd3JOtSsdrX-iNfGndvTmpkCIDIFElmFm9410-2hVPvVR-rgWex0UNm3ZeOp9iYnTG6_P97S5Tz7ORgnootjWoAO9LIAVCbIZtfAJrP468uToZE3NpTpSgY0I5Rem0UQ5nhmXlYnH_U8l6ibotMgIg",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:56900/api/Item/GetAllItems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56900",
+					"path": [
+						"api",
+						"Item",
+						"GetAllItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetItem",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImMxNTBhOGMyZDVlNzBjOThkOTVlY2Q2ZGY3Mjk3NjYwIiwidHlwIjoiSldUIn0.eyJuYmYiOjE2MDIwODkwNTgsImV4cCI6MTYwMjA5MjY1OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1NjkwMCIsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0OjU2OTAwL3Jlc291cmNlcyIsImFwaSJdLCJjbGllbnRfaWQiOiJjbGllbnQiLCJzY29wZSI6WyJhcGkiXX0.U-dGljbzo3H4b8EgcatZ8J-TXal8CVZaPvEJkaTT-9J5ctI1mu1gj-Af_V4Qsnm7IFWKiFbLQFC1CFpmO1wwO1trhH5CETj3sPG6cJFh1qRYLMEuJICDyyo35Lm7cEvIsE9rSYc-BnZgCwBiYF8td5xdED1dBpJSDWva-1qQ2HaBQC2IAAAhES8ueSL_NNaOfd3JOtSsdrX-iNfGndvTmpkCIDIFElmFm9410-2hVPvVR-rgWex0UNm3ZeOp9iYnTG6_P97S5Tz7ORgnootjWoAO9LIAVCbIZtfAJrP468uToZE3NpTpSgY0I5Rem0UQ5nhmXlYnH_U8l6ibotMgIg",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Id\":\"53768531-887d-4819-91a0-dce13a6d020b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:56900/api/Item/GetItem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56900",
+					"path": [
+						"api",
+						"Item",
+						"GetItem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateItem",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImMxNTBhOGMyZDVlNzBjOThkOTVlY2Q2ZGY3Mjk3NjYwIiwidHlwIjoiSldUIn0.eyJuYmYiOjE2MDIwODkwNTgsImV4cCI6MTYwMjA5MjY1OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1NjkwMCIsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0OjU2OTAwL3Jlc291cmNlcyIsImFwaSJdLCJjbGllbnRfaWQiOiJjbGllbnQiLCJzY29wZSI6WyJhcGkiXX0.U-dGljbzo3H4b8EgcatZ8J-TXal8CVZaPvEJkaTT-9J5ctI1mu1gj-Af_V4Qsnm7IFWKiFbLQFC1CFpmO1wwO1trhH5CETj3sPG6cJFh1qRYLMEuJICDyyo35Lm7cEvIsE9rSYc-BnZgCwBiYF8td5xdED1dBpJSDWva-1qQ2HaBQC2IAAAhES8ueSL_NNaOfd3JOtSsdrX-iNfGndvTmpkCIDIFElmFm9410-2hVPvVR-rgWex0UNm3ZeOp9iYnTG6_P97S5Tz7ORgnootjWoAO9LIAVCbIZtfAJrP468uToZE3NpTpSgY0I5Rem0UQ5nhmXlYnH_U8l6ibotMgIg",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ItemVendorId\":\"2198E937-0111-4378-8EC4-A3A1CFE8B4B4\",\r\n    \"Upc\":\"514564564256\",\r\n    \"ItemDescription\":\"Panadol\",\r\n    \"MinimumOrderQuantity\":600,\r\n    \"PurchaseUnitOfMeasure\":\"S/.\",\r\n    \"ItemCost\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:56900/api/Item/CreateItem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56900",
+					"path": [
+						"api",
+						"Item",
+						"CreateItem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateItem",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImMxNTBhOGMyZDVlNzBjOThkOTVlY2Q2ZGY3Mjk3NjYwIiwidHlwIjoiSldUIn0.eyJuYmYiOjE2MDIwODkwNTgsImV4cCI6MTYwMjA5MjY1OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1NjkwMCIsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0OjU2OTAwL3Jlc291cmNlcyIsImFwaSJdLCJjbGllbnRfaWQiOiJjbGllbnQiLCJzY29wZSI6WyJhcGkiXX0.U-dGljbzo3H4b8EgcatZ8J-TXal8CVZaPvEJkaTT-9J5ctI1mu1gj-Af_V4Qsnm7IFWKiFbLQFC1CFpmO1wwO1trhH5CETj3sPG6cJFh1qRYLMEuJICDyyo35Lm7cEvIsE9rSYc-BnZgCwBiYF8td5xdED1dBpJSDWva-1qQ2HaBQC2IAAAhES8ueSL_NNaOfd3JOtSsdrX-iNfGndvTmpkCIDIFElmFm9410-2hVPvVR-rgWex0UNm3ZeOp9iYnTG6_P97S5Tz7ORgnootjWoAO9LIAVCbIZtfAJrP468uToZE3NpTpSgY0I5Rem0UQ5nhmXlYnH_U8l6ibotMgIg",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ItemId\":\"596efbfa-bbec-444c-aa67-1c421a8cd27a\",\r\n    \"ItemVendorId\":\"2198E937-0111-4378-8EC4-A3A1CFE8B4B4\",\r\n    \"Upc\":\"612345678912\",\r\n    \"ItemDescription\":\"Tosaflem\",\r\n    \"MinimumOrderQuantity\":500,\r\n    \"PurchaseUnitOfMeasure\":\"S/.\",\r\n    \"ItemCost\":90\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:56900/api/Item/UpdateItem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56900",
+					"path": [
+						"api",
+						"Item",
+						"UpdateItem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePharmacyInventory",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImMxNTBhOGMyZDVlNzBjOThkOTVlY2Q2ZGY3Mjk3NjYwIiwidHlwIjoiSldUIn0.eyJuYmYiOjE2MDIwODkwNTgsImV4cCI6MTYwMjA5MjY1OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1NjkwMCIsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0OjU2OTAwL3Jlc291cmNlcyIsImFwaSJdLCJjbGllbnRfaWQiOiJjbGllbnQiLCJzY29wZSI6WyJhcGkiXX0.U-dGljbzo3H4b8EgcatZ8J-TXal8CVZaPvEJkaTT-9J5ctI1mu1gj-Af_V4Qsnm7IFWKiFbLQFC1CFpmO1wwO1trhH5CETj3sPG6cJFh1qRYLMEuJICDyyo35Lm7cEvIsE9rSYc-BnZgCwBiYF8td5xdED1dBpJSDWva-1qQ2HaBQC2IAAAhES8ueSL_NNaOfd3JOtSsdrX-iNfGndvTmpkCIDIFElmFm9410-2hVPvVR-rgWex0UNm3ZeOp9iYnTG6_P97S5Tz7ORgnootjWoAO9LIAVCbIZtfAJrP468uToZE3NpTpSgY0I5Rem0UQ5nhmXlYnH_U8l6ibotMgIg",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PharmacyId\":\"6F52C5D7-92E7-4AC5-AB69-414D1156E980\",\r\n    \"ItemId\":\"53768531-887d-4819-91a0-dce13a6d020b\",\r\n    \"QuantityOnHand\":2,\r\n    \"UnitPrice\":26,\r\n    \"ReorderQuantity\":16,\r\n    \"SellingUnitOfMeasure\":\"S/.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:56900/api/Pharmacy/CreatePharmacyInventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56900",
+					"path": [
+						"api",
+						"Pharmacy",
+						"CreatePharmacyInventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePharmacyInventory",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImMxNTBhOGMyZDVlNzBjOThkOTVlY2Q2ZGY3Mjk3NjYwIiwidHlwIjoiSldUIn0.eyJuYmYiOjE2MDIwODkwNTgsImV4cCI6MTYwMjA5MjY1OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1NjkwMCIsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0OjU2OTAwL3Jlc291cmNlcyIsImFwaSJdLCJjbGllbnRfaWQiOiJjbGllbnQiLCJzY29wZSI6WyJhcGkiXX0.U-dGljbzo3H4b8EgcatZ8J-TXal8CVZaPvEJkaTT-9J5ctI1mu1gj-Af_V4Qsnm7IFWKiFbLQFC1CFpmO1wwO1trhH5CETj3sPG6cJFh1qRYLMEuJICDyyo35Lm7cEvIsE9rSYc-BnZgCwBiYF8td5xdED1dBpJSDWva-1qQ2HaBQC2IAAAhES8ueSL_NNaOfd3JOtSsdrX-iNfGndvTmpkCIDIFElmFm9410-2hVPvVR-rgWex0UNm3ZeOp9iYnTG6_P97S5Tz7ORgnootjWoAO9LIAVCbIZtfAJrP468uToZE3NpTpSgY0I5Rem0UQ5nhmXlYnH_U8l6ibotMgIg",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PharmacyInventoryId\":\"66f1c1a9-c192-463b-82a5-0ddf83e8163c\",\r\n    \"PharmacyId\":\"6F52C5D7-92E7-4AC5-AB69-414D1156E980\",\r\n    \"ItemId\":\"53768531-887d-4819-91a0-dce13a6d020b\",\r\n    \"ItemNumber\":100,\r\n    \"QuantityOnHand\":5,\r\n    \"UnitPrice\":15,\r\n    \"ReorderQuantity\":80,\r\n    \"SellingUnitOfMeasure\":\"S/.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:56900/api/Pharmacy/UpdatePharmacyInventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56900",
+					"path": [
+						"api",
+						"Pharmacy",
+						"UpdatePharmacyInventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePharmacyInventory",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImMxNTBhOGMyZDVlNzBjOThkOTVlY2Q2ZGY3Mjk3NjYwIiwidHlwIjoiSldUIn0.eyJuYmYiOjE2MDIwODkwNTgsImV4cCI6MTYwMjA5MjY1OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1NjkwMCIsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0OjU2OTAwL3Jlc291cmNlcyIsImFwaSJdLCJjbGllbnRfaWQiOiJjbGllbnQiLCJzY29wZSI6WyJhcGkiXX0.U-dGljbzo3H4b8EgcatZ8J-TXal8CVZaPvEJkaTT-9J5ctI1mu1gj-Af_V4Qsnm7IFWKiFbLQFC1CFpmO1wwO1trhH5CETj3sPG6cJFh1qRYLMEuJICDyyo35Lm7cEvIsE9rSYc-BnZgCwBiYF8td5xdED1dBpJSDWva-1qQ2HaBQC2IAAAhES8ueSL_NNaOfd3JOtSsdrX-iNfGndvTmpkCIDIFElmFm9410-2hVPvVR-rgWex0UNm3ZeOp9iYnTG6_P97S5Tz7ORgnootjWoAO9LIAVCbIZtfAJrP468uToZE3NpTpSgY0I5Rem0UQ5nhmXlYnH_U8l6ibotMgIg",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:56900/api/Pharmacy/DeletePharmacyInventory/66f1c1a9-c192-463b-82a5-0ddf83e8163c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56900",
+					"path": [
+						"api",
+						"Pharmacy",
+						"DeletePharmacyInventory",
+						"66f1c1a9-c192-463b-82a5-0ddf83e8163c"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
